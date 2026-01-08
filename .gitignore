@@ -1,0 +1,28 @@
+__pycache__/
+
+# Virtual Environment
+venv/
+
+geom/
+inputs/
+main_files/
+output/
+spectra/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Formats
+**/*.tif
+**/*.dcm
+*.in
+*.tif
+*.dcm
+*.log
+*.vrml
+*.out
+*.pdf
+test*
+
+# Files
+sendTL.sh
