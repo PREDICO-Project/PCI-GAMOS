@@ -3,11 +3,7 @@ __pycache__/
 # Virtual Environment
 venv/
 
-geom/
-inputs/
 main_files/
-output/
-spectra/
 
 # Jupyter Notebook
 .ipynb_checkpoints

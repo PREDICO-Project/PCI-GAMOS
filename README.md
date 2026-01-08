@@ -3,7 +3,7 @@
 This repository provides a GAMOS plugin for the simulation of **X-ray Phase-Contrast Imaging (XPCI)** using wave-optical propagation.  
 The plugin extends the standard Monte Carlo particle transport in GAMOS/Geant4 by incorporating **wavefront-based modeling**, enabling the simulation of phase-sensitive imaging techniques beyond pure attenuation contrast.
 
-The code is primarily intended for research and development in X-ray imaging, including Talbot–Lau interferometry and propagation-based phase contrast.
+The code is primarily intended for research and development in X-ray imaging, including Talbot-Lau interferometry and propagation-based phase contrast.
 
 The code inherits a custom plug-in developed in [MIMAC](https://github.com/PREDICO-Project/MIMAC). This plug-in is the **GetImage.cc** plug-in which generates an image through a detector. It is used for Snell-only simulations (without Fresnel propagation).
 
@@ -16,7 +16,7 @@ The code inherits a custom plug-in developed in [MIMAC](https://github.com/PREDI
   - Grating based Imaging (GBI)
     - Absorption gratings
     - Phase gratings
-    - Talbot–Lau interferometer
+    - Talbot-Lau interferometer
 - Fresnel propagation of the complex wavefield
 - Phase stepping simulations
 - Generation of:
@@ -62,8 +62,19 @@ A minimal workflow is:
 ### Example execution
 
 ```bash
-gamos main_TL.in
+gamos main_phase_Snell.in
 ```
+
+We provide some examples to test and learn how to use the developed plug-ins.
+
+* **main_phase_Snell.in** : This macro is used to run a Simulation of a Sphere made of water. This simulation is a Snell-only simulation.
+* **main_phase_propagation.in** : This macro is used to run a Simulation of a Sphere made of water. This simulation perform the Wavefront generation and propagation (Fresnel formalism.)
+
+The **geom** folder contains some examples of worlds and elements (GAMOS solids) to put into the defined worlds.
+The **spectra** folder contains some spectra to use in the simulations.
+The **inputs** folder contains some macros to perform differents tasks like the Image Generation.
+
+We recommend to not modify the folders distribution.
 
 ## Key Parameters
 

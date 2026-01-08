@@ -1,0 +1,9 @@
+ObjectType = Image
+BinaryData = True
+BinaryDataByteOrderMSB = False
+CompressedData = False
+NDims = 2
+DimSize = 1000 1000
+ElementSpacing = 0.001 0.001
+ElementType = MET_FLOAT
+ElementDataFile = Snell.raw

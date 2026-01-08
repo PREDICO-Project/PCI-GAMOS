@@ -1,0 +1,115 @@
+:MIXT "Muscle" 1.05 9
+   G4_H 0.102
+   G4_C 0.143
+   G4_N 0.034
+   G4_O 0.710
+   G4_Na 0.001
+   G4_P 0.002
+   G4_S 0.003
+   G4_Cl 0.001
+   G4_K 0.004
+:MATE_MEE "Muscle" 74.6*eV
+
+:MIXT "Blood" 1.060 10
+   G4_H 0.102
+   G4_C 0.11
+   G4_N 0.033
+   G4_O 0.745
+   G4_Na 0.001
+   G4_P 0.001
+   G4_S 0.002
+   G4_Cl 0.003
+   G4_K 0.002
+   G4_Fe 0.001
+:MATE_MEE "Blood" 75.0*eV
+
+:MIXT "Glandular" 1.035 8
+   G4_H 0.106
+   G4_C 0.332
+   G4_N 0.03
+   G4_O 0.527
+   G4_Na 0.001
+   G4_P 0.001
+   G4_S 0.002
+   G4_Cl 0.001
+
+:MIXT "Cancerous_mass" 1.060 8
+   G4_H 0.106
+   G4_C 0.332
+   G4_N 0.03
+   G4_O 0.527
+   G4_Na 0.001
+   G4_P 0.001
+   G4_S 0.002
+   G4_Cl 0.001
+  
+:MIXT "Ligament" 1.120 7
+   G4_H 0.094
+   G4_C 0.207
+   G4_N 0.062
+   G4_O 0.622
+   G4_Na 0.006
+   G4_S 0.006
+   G4_Cl 0.003
+
+:MIXT "Calcification" 1.781 3
+   G4_C 0.187
+   G4_O 0.500
+   G4_Ca 0.313
+
+:MIXT "Compression_paddle" 1.060 2
+   G4_H 0.077
+   G4_C 0.923
+
+:MIXT "Skin" 1.090 9
+   G4_H 0.100
+   G4_C 0.250
+   G4_N 0.046
+   G4_O 0.594
+   G4_Na 0.002
+   G4_P 0.001
+   G4_S 0.003
+   G4_Cl 0.003
+   G4_K 0.001
+
+:MIXT "aSe" 4.28 1
+   G4_Se 1.0
+   
+:MIXT "Breast_Skin" 1.090 8
+   G4_H 0.09800
+   G4_C 0.17800
+   G4_N 0.05000
+   G4_O 0.66700
+   G4_P 0.00175
+   G4_S 0.00175
+   G4_Ca 0.00175
+   G4_K 0.00175
+   
+:MIXT "Breast_Adipose" 0.93 8
+   G4_H 0.11200
+   G4_C 0.61900
+   G4_N 0.01700
+   G4_O 0.25100
+   G4_P 0.00025
+   G4_S 0.00025
+   G4_Ca 0.00025
+   G4_K 0.00025
+   
+:MIXT "Breast_Glandula" 1.040 8
+   G4_H 0.10200
+   G4_C 0.18400
+   G4_N 0.03200
+   G4_O 0.67700
+   G4_P 0.00125
+   G4_S 0.00125
+   G4_Ca 0.00125
+   G4_K 0.00125
+   
+:MIXT "AAPM_PMMA" 1.19 3
+   G4_H 0.080541
+   G4_C 0.599846
+   G4_O 0.319613
+   
+:MIXT "Breast_Tissue" (0.8*0.93+0.2*1.040) 2
+   "Breast_Adipose" 0.8
+   "Breast_Glandula" 0.2
