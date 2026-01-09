@@ -1,0 +1,37 @@
+##################################### 
+##     Write Wavefront Matrix      ## 
+##################################### 
+
+# Detector Pixels
+/gamos/setParam GetWavefront:NumPixelsX 1000
+/gamos/setParam GetWavefront:NumPixelsY 1000
+
+# Grid Pixels and Size
+/gamos/setParam GetWavefront:gridX 10000
+/gamos/setParam GetWavefront:gridY 10000
+/gamos/setParam GetWavefront:gridSizeX 0.1*um
+/gamos/setParam GetWavefront:gridSizeY 0.1*um
+
+# Virtual plane position
+/gamos/setParam GetWavefront:zVirtualPlane 403.23
+
+# Propagation distance (mm)
+/gamos/setParam GetWavefront:PropDistance 30.
+
+
+/gamos/setParam GetWavefront:debugMode 0
+
+/gamos/setParam DoTalbot:Talbot 0
+/gamos/setParam DoTalbot:PeriodG2 1.0*um
+/gamos/setParam DoTalbot:displacement 0. 0. 0.
+/gamos/setParam DoTalbot:rotationAxis 0. 0. 1.
+/gamos/setParam DoTalbot:rotationAngle 0*deg
+
+##################################### 
+##              Output             ## 
+##################################### 
+
+/gamos/setParam GetWavefront:ResultsFolder output/
+/gamos/setParam GetWavefront:OutputFilename test_sphere
+
+/gamos/userAction GmGetWavefront

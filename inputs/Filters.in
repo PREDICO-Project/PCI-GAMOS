@@ -1,0 +1,42 @@
+##################################### 
+## FILTERS Definition & Parameters ## 
+##################################### 
+
+# Photons affected by Rayleigh scattering
+/gamos/filter RL GmProcessFilter Rayl
+# Photons affected by Compton scattering
+/gamos/filter Cmp GmProcessFilter compt 
+
+# Scattered photons filter
+/gamos/filter ScTT GmORFilter RL Cmp 
+
+# kill photons at the jaws 
+#/gamos/filter KillJawsx1 GmEnterPhysicalVolumeFilter x1jaw 
+#/gamos/filter KillJawsx2 GmEnterPhysicalVolumeFilter x2jaw 
+#/gamos/filter KillJawsy1 GmEnterPhysicalVolumeFilter y1jaw 
+#/gamos/filter KillJawsy2 GmEnterPhysicalVolumeFilter y2jaw 
+
+#/gamos/filter killJaws GmORFilter KillJawsx1 KillJawsx2 KillJawsy1 KillJawsy2 
+
+#kill photons at the detector's end 
+#/gamos/filter detectorEND GmEnterPhysicalVolumeFilter stopVOLU 
+
+######################## 
+##   Apply filters    ## 
+######################## 
+
+#Apply Filter1, Kill all electrons
+/gamos/userAction GmKillAtStackingActionUA GmElectronFilter 
+
+#Apply Filter2, Kill secondary tracks
+#/gamos/userAction GmKillAtSteppingActionUA GmSecondaryFilter 
+
+#Apply Filter3, Kill scattered photons
+#/gamos/userAction GmKillAtSteppingActionUA ScTT 
+
+#Apply Filter4, Kill photons at the jaws
+#/gamos/userAction GmKillAtSteppingActionUA killJaws 
+
+#Apply Filter5, Kill photons at detectorEND
+#/gamos/userAction GmKillAtSteppingActionUA detectorEND 
+

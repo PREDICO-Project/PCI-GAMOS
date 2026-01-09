@@ -1,0 +1,34 @@
+##################################### 
+##     Write Wavefront Matrix      ## 
+##################################### 
+
+
+/gamos/setParam GetWavefront:NumPixelsX 250
+/gamos/setParam GetWavefront:NumPixelsY 250
+
+/gamos/setParam GetWavefront:gridX 15000
+/gamos/setParam GetWavefront:gridY 15000
+/gamos/setParam GetWavefront:gridSizeX 0.2*um
+/gamos/setParam GetWavefront:gridSizeY 0.2*um
+
+/gamos/setParam GetWavefront:zVirtualPlane 404
+
+# Fractional Talbot distance
+/gamos/setParam GetWavefront:PropDistance 8.07
+
+/gamos/setParam GetWavefront:debugMode 0
+
+/gamos/setParam DoTalbot:Talbot 1
+/gamos/setParam DoTalbot:PeriodG2 1.0*um
+/gamos/setParam DoTalbot:displacement 0. 0. 0.
+/gamos/setParam DoTalbot:rotationAxis 0. 0. 1.
+/gamos/setParam DoTalbot:rotationAngle 0*deg
+
+##################################### 
+##              Output             ## 
+##################################### 
+
+/gamos/setParam GetWavefront:ResultsFolder output/TL/
+/gamos/setParam GetWavefront:OutputFilename test
+
+/gamos/userAction GmGetWavefront

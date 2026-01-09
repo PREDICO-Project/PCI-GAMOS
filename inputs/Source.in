@@ -1,0 +1,23 @@
+######################## 
+##    SOURCE Setup    ## 
+########################
+
+#Initialization
+#/gamos/generator/addSingleParticleSource source gamma 20*keV 
+/gamos/generator/addSingleParticleSource source gamma 16.5*keV
+
+#Spectra
+#/gamos/generator/energyDist source GmGenerDistEnergyFromFile spectra/IEC.in interpolate 
+
+#Position Distribution
+#/gamos/generator/positionDist source GmGenerDistPositionDiscGaussian 0.00000001 0. 0. 0. 0. 0. -1.
+
+#Distribution Shape
+#The Beam is isotropic with virtual jaws to colimate the beam, where the axis is aligned with the virtual chest wall. The angles distribution are defined as in Geant4 and other MC simulations.
+#/gamos/generator/directionDist source Pyr_Dist_Isotropic 0. 0. 1. 403.2 0.150 0.150 0. 0. # Talbot
+
+#/gamos/generator/directionDist source Pyr_Dist_Isotropic 0. 0. 1. 400 0.3 0.3 0. 0.
+/gamos/generator/directionDist source GmGenerDistDirectionConst 0 0 1.
+#/gamos/generator/positionDist source GmGenerDistPositionSquare 7.5 0 0 0 0 0 -1
+/gamos/generator/positionDist source GmGenerDistPositionSquare 0.5 0 0 0 0 0 -1
+#/gamos/generator/positionDist source GmGenerDistPositionRectangle 0.0015 0.075 0 0 0 0 0 -1

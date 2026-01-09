@@ -1,0 +1,15 @@
+ObjectType = Image
+BinaryData = True
+BinaryDataByteOrderMSB = False
+CompressedData = False
+NDims = 2
+DimSize = 1000 1000
+ElementSpacing = 0.001 0.001
+ElementType = MET_FLOAT
+DSO = 403.23 mm
+DSD = 433.23 mm
+GeomMagnification = 1
+SourceDirectionDistribution = GmGenerDistDirectionConst
+EffectiveEnergy = 16500 eV
+EventsSimulated = 1e+08
+ElementDataFile = test_sphere_intensity.raw

@@ -1,0 +1,40 @@
+##################################### 
+##       Write Energy Matrix       ## 
+##################################### 
+
+
+#Just if Realistic Detector Model
+#/gamos/setParam SD:VirtSegmBox:NDiv:Absorber 1500 1500 1. 
+#/gamos/setParam SD:VirtSegmBox:Width:Absorber 1.5 1.5 0.2 
+#/gamos/SD/assocSD2LogVol GmSDVirtSegmBox Absorber detector
+#/gamos/SD/recHitBuilder GmRecHitBuilder1to1 Absorber
+
+
+/gamos/setParam GetImage:NumPixelsX 1000
+/gamos/setParam GetImage:NumPixelsY 1000
+/gamos/setParam GetImage:PixelSizeX 0.0010
+/gamos/setParam GetImage:PixelSizeY 0.0010
+/gamos/setParam GetImage:zStop 433.23
+
+##################################### 
+##              Output             ## 
+##################################### 
+
+/gamos/setParam GetImage:DetectorModel VD
+/gamos/setParam GetImage:OutputSelection Energy
+/gamos/setParam GetImage:ResultsFolder output/
+/gamos/setParam GetImage:OutputFilename Snell
+
+##################################### 
+##      AntiScatter Grid           ## 
+##################################### 
+ 
+/gamos/setParam Grid:UseGrid No
+
+/gamos/setParam Grid:Ratio 5.0
+/gamos/setParam Grid:SourceDetectorDistance 650.0
+/gamos/setParam Grid:Frequency 3.1
+/gamos/setParam Grid:StripThickness 0.065
+/gamos/setParam Grid:Gap -63.325
+
+/gamos/userAction GmGetImage

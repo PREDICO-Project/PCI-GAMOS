@@ -11,14 +11,13 @@ main_files/
 # Formats
 **/*.tif
 **/*.dcm
-*.in
 *.tif
 *.dcm
 *.log
 *.vrml
 *.out
 *.pdf
-test*
 
 # Files
 sendTL.sh
+main_TL*

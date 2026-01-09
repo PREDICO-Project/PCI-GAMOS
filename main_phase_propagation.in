@@ -1,0 +1,56 @@
+##################################################
+##                   NOTES                      ##
+################################################## 
+
+# 0.- This file establishes the main parameters of 
+# the simulation 
+
+##################################################
+##               MAIN file setup                ##
+################################################## 
+
+#LOAD GEOMETRY FROM FILE, PHANTOM DICOM 
+#/control/execute inputs/DICOM.in 
+/gamos/setParam GmGeometryFromText:FileName geom/worlds/world_PCI.geom 
+/gamos/geometry GmGeometryFromText 
+
+#PHYSICS 
+#/control/execute inputs/Physics.in
+/gamos/physicsList PhysicsListPC
+
+#SET CUT-OFF. PARTICLE MINIMUM RANGE AT ANY MATERIAL 
+/run/setCut 1.0 
+
+#GENERATOR INITIALIZATION 
+/gamos/generator GmGenerator 
+
+#INITIALISE GEANT4 
+/run/initialize 
+
+#FILTERS
+/control/execute inputs/Filters.in
+
+#HITS and SENSITIVE VOLUME
+#/control/execute inputs/GetImage.in
+
+/control/execute inputs/GetWavefront_propagation.in
+
+#GENERATOR OF PRIMARIES
+/control/execute inputs/Source.in
+
+#VERBOSITY 
+/gamos/log/writeFiles FALSE 
+#/gamos/verbosity GmAnalysisVerbosity debug 
+#/tracking/verbose 1 
+
+#VRML VISUALIZATION FILE
+#/control/execute vis/visVRML2FILE.in
+
+#EXTRA PARAMS 
+#/gamos/userAction GmCountTracksUA 
+/gamos/random/setSeeds 2142  658
+#/gamos/base/printParametersUsage 2 
+
+#RUN N-EVENTS 
+/run/beamOn 100000000
+#/run/beamOn 5
