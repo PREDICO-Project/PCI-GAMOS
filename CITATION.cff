@@ -1,0 +1,33 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: PCI-GAMOS
+message: >-
+  If you use this software, please cite it using the data
+  from this file
+type: software
+authors:
+  - given-names: Victor
+    family-names: Sanchez-Lara
+    orcid: 'https://orcid.org/0009-0006-2186-1848'
+    email: vicsan05@ucm.es
+  - given-names: Francisco Rafael
+    family-names: Lozano-Martinez
+    orcid: 'https://orcid.org/0000-0003-0165-1772'
+    email: frloza03@ucm.es
+  - given-names: Carlos
+    family-names: Huerga
+    orcid: 'https://orcid.org/0000-0002-5693-8300'
+  - given-names: Luis Carlos
+    family-names: Martinez-Gomez
+    orcid: 'https://orcid.org/0000-0002-0796-721X'
+  - given-names: Diego
+    family-names: Garcia-Pinto
+    orcid: 'https://orcid.org/0000-0003-1348-6735'
+identifiers:
+  - type: doi
+    value: 10.1016/j.ejmp.2025.104995
+repository-code: 'https://github.com/PREDICO-Project/PCI-GAMOS'
+version: v1.0.0
+date-released: '2026-01-01'
